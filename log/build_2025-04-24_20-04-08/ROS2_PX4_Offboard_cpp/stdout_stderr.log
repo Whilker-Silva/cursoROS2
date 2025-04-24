@@ -1,0 +1,11 @@
+[35m[1mConsolidate compiler generated dependencies of target trajetoria[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/trajetoria.dir/src/Trajetoria_fixa/Trajetoria_fixa.cpp.o[0m
+[100%] [32m[1mLinking CXX executable trajetoria[0m
+/usr/bin/ld: CMakeFiles/trajetoria.dir/src/Trajetoria_fixa/Trajetoria_fixa.cpp.o: aviso: relocalização contra "_ZTV15Trajetoria_fixa" em secção só de leitura ".text"
+/usr/bin/ld: CMakeFiles/trajetoria.dir/src/Trajetoria_fixa/Trajetoria_fixa.cpp.o: na função "Trajetoria_fixa::Trajetoria_fixa(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)":
+Trajetoria_fixa.cpp:(.text+0xb1): referência não definida para "vtable for Trajetoria_fixa"
+/usr/bin/ld: aviso: a criar DT_TEXTREL num PIE.
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/trajetoria.dir/build.make:167: trajetoria] Erro 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/trajetoria.dir/all] Erro 2
+gmake: *** [Makefile:146: all] Erro 2

@@ -1,0 +1,6 @@
+WARNING: Package name "ROS2_PX4_Offboard_cpp" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[01m[K/home/whilker/Documentos/cursoROS2/src/ROS2_PX4_Offboard_cpp/src/Trajetoria_fixa/Trajetoria_fixa.cpp:[m[K In member function ‘[01m[Kvoid Trajetoria_fixa::callbackControls(geometry_msgs::msg::Twist_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/whilker/Documentos/cursoROS2/src/ROS2_PX4_Offboard_cpp/src/Trajetoria_fixa/Trajetoria_fixa.cpp:14:83:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   14 | _fixa::callbackControls([01;35m[Kconst geometry_msgs::msg::Twist::SharedPtr msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+

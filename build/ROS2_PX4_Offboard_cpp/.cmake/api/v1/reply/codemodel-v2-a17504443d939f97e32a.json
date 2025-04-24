@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-1cc07f0b88a5ef911ad5.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ROS2_PX4_Offboard_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ROS2_PX4_Offboard_cpp_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ROS2_PX4_Offboard_cpp_uninstall-5ba2b4259fc56f6b13ac.json",
+					"name" : "ROS2_PX4_Offboard_cpp_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "trajetoria::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-trajetoria-a16a7edac9a1a1374305.json",
+					"name" : "trajetoria",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-2635eeea072af4627117.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/whilker/Documentos/cursoROS2/build/ROS2_PX4_Offboard_cpp",
+		"source" : "/home/whilker/Documentos/cursoROS2/src/ROS2_PX4_Offboard_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

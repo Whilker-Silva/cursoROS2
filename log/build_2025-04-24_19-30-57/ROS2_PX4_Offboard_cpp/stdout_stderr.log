@@ -1,0 +1,27 @@
+[35m[1mConsolidate compiler generated dependencies of target trajetoria[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/trajetoria.dir/src/Trajetoria_fixa/Trajetoria_fixa.cpp.o[0m
+[01m[K/home/whilker/Documentos/cursoROS2/src/ROS2_PX4_Offboard_cpp/src/Trajetoria_fixa/Trajetoria_fixa.cpp:[m[K In member function ‘[01m[Kvoid Trajetoria_fixa::callbackControls(geometry_msgs::msg::Twist_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/whilker/Documentos/cursoROS2/src/ROS2_PX4_Offboard_cpp/src/Trajetoria_fixa/Trajetoria_fixa.cpp:17:83:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   17 | :callbackControls([01;35m[Kconst geometry_msgs::msg::Twist::SharedPtr msg[m[K)
+      |                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+
+[100%] [32m[1mLinking CXX executable trajetoria[0m
+[100%] Built target trajetoria
+-- Install configuration: ""
+-- Installing: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/lib/ROS2_PX4_Offboard_cpp/trajetoria
+-- Set runtime path of "/home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/lib/ROS2_PX4_Offboard_cpp/trajetoria" to ""
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ament_index/resource_index/package_run_dependencies/ROS2_PX4_Offboard_cpp
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ament_index/resource_index/parent_prefix_path/ROS2_PX4_Offboard_cpp
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/environment/ament_prefix_path.sh
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/environment/path.sh
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/environment/path.dsv
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/local_setup.bash
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/local_setup.sh
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/local_setup.zsh
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/local_setup.dsv
+-- Installing: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/package.dsv
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ament_index/resource_index/packages/ROS2_PX4_Offboard_cpp
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/cmake/ROS2_PX4_Offboard_cppConfig.cmake
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/cmake/ROS2_PX4_Offboard_cppConfig-version.cmake
+-- Up-to-date: /home/whilker/Documentos/cursoROS2/install/ROS2_PX4_Offboard_cpp/share/ROS2_PX4_Offboard_cpp/package.xml
