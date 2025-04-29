@@ -1,2 +1,4 @@
-
-/log
+# Ignorar diretórios de build, logs e instalação
+build/
+log/
+install/

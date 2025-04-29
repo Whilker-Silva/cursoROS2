@@ -1,4 +1,0 @@
-source;share/ROS2_PX4_Offboard_cpp/local_setup.bash
-source;share/ROS2_PX4_Offboard_cpp/local_setup.dsv
-source;share/ROS2_PX4_Offboard_cpp/local_setup.sh
-source;share/ROS2_PX4_Offboard_cpp/local_setup.zsh
