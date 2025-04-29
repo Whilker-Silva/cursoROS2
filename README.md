@@ -1,6 +1,8 @@
 # Integração ROS 2 + PX4
 
-Este guia apresenta o passo a passo para integrar o ROS 2 com o PX4, incluindo os requisitos de sistema, comandos de instalação e execução de exemplo.
+Para realizar as instalação, execute no terminal os comandos abaixo um de cada vez, se encontrar problemas de instalação, bugs ou erros de dependências, as ferramentas baseadas em IA como o Chat GPT têm se mostrado excelentes para resolver esse tipo de problema.
+
+💡 Dica: copiem e colem os comandos e os erros completos — vocês vão se surpreender com a precisão das respostas.
 
 ---
 
@@ -14,49 +16,19 @@ Este guia apresenta o passo a passo para integrar o ROS 2 com o PX4, incluindo o
 
 ## ⚙️ Instalação no Ubuntu
 
+A versão mais recomendada do Ubuntu para trabalhar com o PX4 é a **22.04 LTS**.
+
+Mesmo que você já tenha outra versão instalada, é fortemente recomendado o uso desta versão, pois ela possui o maior suporte da comunidade e melhor compatibilidade com os pacotes necessários.
+
+Uma sugestão caso já utilize outro sistema operacional, é realizar a instalação do Ubuntu em dual boot ou máquina virtual que permitirá você usar mais de um sistema operacional no mesmo computador.
+
+Link oficial com passo a passo para instalação Ubuntu 22.04
+
+[Install Ubuntu Desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)
+
+Sugestão de como instalar em dual boot, contudo não se esqueça que usar a versão 22.04 LTS
+
+[Como instalar Ubuntu junto do Windowns 11](https://www.youtube.com/watch?v=QrsDuBwgF9Y&ab_channel=MWInform%C3%A1tica)
+
 ### Instalação do ROS 2
 
-```bash
-sudo apt update && sudo apt upgrade -y
-sudo apt install curl gnupg2 lsb-release
-curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
-sudo apt update
-sudo apt install ros-humble-desktop
-Instalação do PX4
-bash
-Copiar
-Editar
-git clone https://github.com/PX4/PX4-Autopilot.git --recursive
-cd PX4-Autopilot
-bash ./Tools/setup/ubuntu.sh
-cd PX4-Autopilot
-make px4_sitl
-🧱 Configuração do Workspace ROS 2
-bash
-Copiar
-Editar
-mkdir -p ~/ros2_ws/src
-cd ~/ros2_ws/src
-git clone https://github.com/PX4/px4_ros_com.git
-cd ..
-colcon build
-source install/local_setup.bash
-▶️ Executando o Código de Exemplo
-bash
-Copiar
-Editar
-ros2 launch px4_ros_com sensor_combined_listener.launch.py
-💡 Dica de Produtividade
-Ferramentas de IA, como o ChatGPT, são ótimas para resolver problemas de instalação e erros de dependência. Basta copiar e colar o comando ou a mensagem de erro completa — você pode se surpreender com a precisão das respostas!
-
-📎 Referências
-PX4 Docs
-
-ROS 2 Docs
-
-css
-Copiar
-Editar
-
-Se quiser, posso gerar esse arquivo em formato `.md` para você baixar diretamente. Deseja isso?
