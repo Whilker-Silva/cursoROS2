@@ -8,9 +8,9 @@ Para realizar as instalação, execute no terminal os comandos abaixo um de cada
 
 ## 📋 Requisitos de Sistema
 
-- **Sistema Operacional:** Ubuntu 20.04 ou 22.04
+- Um PC com pelo menos 64 GB de espaço de armazenamento.
+- **Sistema Operacional:** Ubuntu 22.04 LTS
 - **ROS 2:** Humble (LTS)
-- **PX4:** v1.14 ou superior
 
 ---
 
@@ -29,6 +29,8 @@ Link oficial com passo a passo para instalação Ubuntu 22.04
 Sugestão de como instalar em dual boot, contudo não se esqueça que usar a versão 22.04 LTS
 
 [Como instalar Ubuntu junto do Windowns 11](https://www.youtube.com/watch?v=QrsDuBwgF9Y&ab_channel=MWInform%C3%A1tica)
+
+---
 
 ### Instalação do ROS 2
 
