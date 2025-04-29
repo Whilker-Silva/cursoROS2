@@ -32,5 +32,24 @@ Sugestão de como instalar em dual boot, contudo não se esqueça que usar a ver
 
 ---
 
-### Instalação do ROS 2
+## Instalação do ROS 2 
+
+### Passo 1: Atualizar pacotes
+
+```bash
+sudo apt update
+sudo apt upgrade
+```
+
+### Passo 2: Definir localidade
+Certifique-se de ter uma localidade compatível com `UTF-8` para isso digite no terminal o comando `locale` , caso a resposta seja uma localidade não compatível, use o seguintes comandos.
+
+```bash
+sudo apt update && sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+```
+
+
 
