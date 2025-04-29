@@ -62,17 +62,24 @@ class OffboardControl(Node):
             depth=1
         )
 
-        #Create subscriptions
-        self.status_sub = self.create_subscription(
-            VehicleStatus,
-            '/fmu/out/vehicle_status',
-            self.vehicle_status_callback,
-            qos_profile)
+        #Create subscriptions    
         
         self.offboard_velocity_sub = self.create_subscription(
             Twist,
             '/offboard_velocity_cmd',
             self.offboard_velocity_callback,
+            qos_profile)
+
+        self.my_bool_sub = self.create_subscription(
+            Bool,
+            '/arm_message',
+            self.arm_message_callback,
+            qos_profile)
+
+        self.status_sub = self.create_subscription(
+            VehicleStatus,
+            '/fmu/out/vehicle_status',
+            self.vehicle_status_callback,
             qos_profile)
         
         self.attitude_sub = self.create_subscription(
@@ -81,11 +88,7 @@ class OffboardControl(Node):
             self.attitude_callback,
             qos_profile)
         
-        self.my_bool_sub = self.create_subscription(
-            Bool,
-            '/arm_message',
-            self.arm_message_callback,
-            qos_profile)
+        
 
 
         #Create publishers
@@ -238,7 +241,7 @@ class OffboardControl(Node):
         # Y (FLU) is X (NED)
         self.velocity.y = msg.linear.x
         # Z (FLU) is -Z (NED)
-        self.velocity.z = -msg.linear.z
+        #self.velocity.z = -msg.linear.z
         # A conversion for angular z is done in the attitude_callback function(it's the '-' in front of self.trueYaw)
         self.yaw = msg.angular.z
 
@@ -256,25 +259,25 @@ class OffboardControl(Node):
             # Publish offboard control modes
             offboard_msg = OffboardControlMode()
             offboard_msg.timestamp = int(Clock().now().nanoseconds / 1000)
-            offboard_msg.position = False
+            offboard_msg.position = True
             offboard_msg.velocity = True
             offboard_msg.acceleration = False
             self.publisher_offboard_mode.publish(offboard_msg)            
 
             # Compute velocity in the world frame
-            cos_yaw = np.cos(self.trueYaw)
-            sin_yaw = np.sin(self.trueYaw)
-            velocity_world_x = (self.velocity.x * cos_yaw - self.velocity.y * sin_yaw)
-            velocity_world_y = (self.velocity.x * sin_yaw + self.velocity.y * cos_yaw)
+            #cos_yaw = np.cos(self.trueYaw)
+            #sin_yaw = np.sin(self.trueYaw)
+            #velocity_world_x = (self.velocity.x * cos_yaw - self.velocity.y * sin_yaw)
+            #velocity_world_y = (self.velocity.x * sin_yaw + self.velocity.y * cos_yaw)
 
             # Create and publish TrajectorySetpoint message with NaN values for position and acceleration
             trajectory_msg = TrajectorySetpoint()
             trajectory_msg.timestamp = int(Clock().now().nanoseconds / 1000)
-            trajectory_msg.velocity[0] = velocity_world_x
-            trajectory_msg.velocity[1] = velocity_world_y
+            trajectory_msg.velocity[0] = float('nan')
+            trajectory_msg.velocity[1] = float('nan')
             trajectory_msg.velocity[2] = self.velocity.z
-            trajectory_msg.position[0] = float('nan')
-            trajectory_msg.position[1] = float('nan')
+            trajectory_msg.position[0] = self.velocity.x
+            trajectory_msg.position[1] = self.velocity.x
             trajectory_msg.position[2] = float('nan')
             trajectory_msg.acceleration[0] = float('nan')
             trajectory_msg.acceleration[1] = float('nan')

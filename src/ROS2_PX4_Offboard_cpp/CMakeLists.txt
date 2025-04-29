@@ -9,12 +9,13 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 
 #Executável Nó trajetoria
 add_executable(trajetoria)
 
 #vincula as dependencia do nó trajetoria
-ament_target_dependencies(trajetoria rclcpp geometry_msgs) 
+ament_target_dependencies(trajetoria rclcpp geometry_msgs std_msgs) 
 
 #faz ligação dos arquivos usados em trajetoria
 target_sources(

@@ -1,7 +1,0 @@
-[31mCMake Error at CMakeLists.txt:20 (target_sources):
-  Cannot specify sources for target "control" which is not built by this
-  project.
-
-[0m
-WARNING: Package name "ROS2_PX4_Offboard_cpp" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
-gmake: *** [Makefile:226: cmake_check_build_system] Erro 1

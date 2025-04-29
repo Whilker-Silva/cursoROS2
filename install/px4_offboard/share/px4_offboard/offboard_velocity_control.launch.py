@@ -47,12 +47,14 @@ def generate_launch_description():
     # bash_script_path = os.path.join(package_dir, 'scripts', 'TerminatorScript.sh')
     return LaunchDescription([
         # ExecuteProcess(cmd=['bash', bash_script_path], output='screen'),
-        Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
-            executable='visualizer',
-            name='visualizer'
-        ),
+        
+        #Node(
+        #    package='px4_offboard',
+        #    namespace='px4_offboard',
+        #    executable='visualizer',
+        #    name='visualizer'
+        #),
+        
         Node(
             package='px4_offboard',
             namespace='px4_offboard',
@@ -60,24 +62,28 @@ def generate_launch_description():
             name='processes',
             prefix='gnome-terminal --'
         ),
-        Node(
-            package='px4_offboard',
-            namespace='px4_offboard',
-            executable='control',
-            name='control',
-            prefix='gnome-terminal --',
-        ),
+
+        #Node(
+        #    package='px4_offboard',
+        #    namespace='px4_offboard',
+        #    executable='control',
+        #    name='control',
+        #    prefix='gnome-terminal --',
+        #),
+        
         Node(
             package='px4_offboard',
             namespace='px4_offboard',
             executable='velocity_control',
             name='velocity'
-        ),
-        Node(
-            package='rviz2',
-            namespace='',
-            executable='rviz2',
-            name='rviz2',
-            arguments=['-d', [os.path.join(package_dir, 'visualize.rviz')]]
         )
+        
+        #Node(
+        #    package='rviz2',
+        #    namespace='',
+        #    executable='rviz2',
+        #    name='rviz2',
+        #    arguments=['-d', [os.path.join(package_dir, 'visualize.rviz')]]
+        #)
+    
     ])
