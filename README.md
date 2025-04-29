@@ -32,7 +32,7 @@ Sugestão de como instalar em dual boot, contudo não se esqueça que usar a ver
 
 ---
 
-## Instalação do ROS 2 
+## 🤖 Instalação do ROS 2 
 
 ### Passo 1: Atualizar pacotes
 
@@ -50,6 +50,17 @@ sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 ```
+
+.
+.
+.
+
+[Como instalar](https://rift-sunspot-acb.notion.site/Integra-o-ROS-2-PX4-1dfef3fa298080deb8c7f0b4951a7487)
+
+.
+.
+.
+
 
 
 
