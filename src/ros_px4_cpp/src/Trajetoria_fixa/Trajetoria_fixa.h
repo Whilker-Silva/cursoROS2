@@ -26,7 +26,7 @@ private:
 
     bool decolou;
 
-    void dronePronto_callback(const std_msgs::msg::Bool::SharedPtr msg);
+      void dronePronto_callback(const std_msgs::msg::Bool::SharedPtr msg);
     void decolarDrone();    
     void moveDrone();    
    

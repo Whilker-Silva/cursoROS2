@@ -8,5 +8,18 @@
         "*.scss.liquid": "liquid-scss",
         "*.ino": "cpp",
         "functional": "cpp"
-    }
+    },
+    "python.autoComplete.extraPaths": [
+        "/home/whilker/Documentos/cursoROS2/install/px4_offboard/lib/python3.10/site-packages",
+        "/home/whilker/Documentos/cursoROS2/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/whilker/Documentos/cursoROS2/install/px4_offboard/lib/python3.10/site-packages",
+        "/home/whilker/Documentos/cursoROS2/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "cmake.ignoreCMakeListsMissing": true
 }

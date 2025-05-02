@@ -41,30 +41,33 @@ void Trajetoria_fixa::moveDrone()
 {
     auto msg = geometry_msgs::msg::Twist();
 
-    
-
-    msg.linear.x = 2;
-    msg.linear.y = 0;    
+    msg.linear.z = 5;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(2,0)");
+    RCLCPP_INFO(this->get_logger(), "(0,0,5)");
     sleep_for(3s);
 
     msg.linear.x = 2;
-    msg.linear.y = 2;    
+    msg.linear.y = 0;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(2,2)");
+    RCLCPP_INFO(this->get_logger(), "(2,0,5)");
+    sleep_for(3s);
+
+    msg.linear.x = 2;
+    msg.linear.y = 2;
+    publisherVelocity->publish(msg);
+    RCLCPP_INFO(this->get_logger(), "(2,2,5)");
     sleep_for(3s);
 
     msg.linear.x = 0;
-    msg.linear.y = 2;   
+    msg.linear.y = 2;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(0,2)");
+    RCLCPP_INFO(this->get_logger(), "(0,2,5)");
     sleep_for(3s);
 
     msg.linear.x = 0;
-    msg.linear.y = 0;   
+    msg.linear.y = 0;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(0,0)");
+    RCLCPP_INFO(this->get_logger(), "(0,0,5)");
     sleep_for(3s);
 }
 
