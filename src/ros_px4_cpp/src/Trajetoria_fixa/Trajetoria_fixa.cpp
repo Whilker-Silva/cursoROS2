@@ -41,34 +41,34 @@ void Trajetoria_fixa::moveDrone()
 {
     auto msg = geometry_msgs::msg::Twist();
 
-    msg.linear.z = 5;
+    msg.linear.z = 20;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(0,0,5)");
-    sleep_for(3s);
+    RCLCPP_INFO(this->get_logger(), "(0,0,20)");
+    sleep_for(10s);
 
-    msg.linear.x = 2;
+    msg.linear.x = 100;
     msg.linear.y = 0;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(2,0,5)");
-    sleep_for(3s);
+    RCLCPP_INFO(this->get_logger(), "(100,0,20)");
+    sleep_for(10s);
 
-    msg.linear.x = 2;
-    msg.linear.y = 2;
+    msg.linear.x = 100;
+    msg.linear.y = 100;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(2,2,5)");
-    sleep_for(3s);
+    RCLCPP_INFO(this->get_logger(), "(100,100,20)");
+    sleep_for(10s);
 
     msg.linear.x = 0;
-    msg.linear.y = 2;
+    msg.linear.y = 100;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(0,2,5)");
-    sleep_for(3s);
+    RCLCPP_INFO(this->get_logger(), "(0,100,20)");
+    sleep_for(10s);
 
     msg.linear.x = 0;
     msg.linear.y = 0;
     publisherVelocity->publish(msg);
-    RCLCPP_INFO(this->get_logger(), "(0,0,5)");
-    sleep_for(3s);
+    RCLCPP_INFO(this->get_logger(), "(0,0,20)");
+    sleep_for(10s);
 }
 
 int main(int argc, char **argv)
@@ -80,3 +80,9 @@ int main(int argc, char **argv)
     shutdown();                                                                       // desliga o nó
     return 0;
 }
+
+
+// Consegui colocar no nameespace
+// delay apos comando de posição
+
+
